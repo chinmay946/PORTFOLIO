@@ -95,7 +95,7 @@ contactForm.addEventListener('submit', async event => {
   formMessage.style.color = '#7ddcff';
 
   try {
-    const response = await fetch('/api/messages', {
+    const response = await fetch('https://portfolio-1-1p5v.onrender.com/api/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
