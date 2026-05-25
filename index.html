@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern student web developer portfolio with dark glassmorphism design." />
+  <title>Chinmay K S - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader-overlay" id="loader">
+    <div class="loader-shell">
+      <div class="loader-ring"></div>
+      <p>Loading portfolio...</p>
+    </div>
+  </div>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <span>&#8679;</span>
+  </button>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#home" class="brand">Portfolio</a>
+      <nav class="nav" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy glass-card fade-in-up">
+          <span class="eyebrow">Hello, I am</span>
+          <h1>Chinmay K S</h1>
+          <p class="role">Student Computer Science Engineering</p>
+          <p class="intro">
+            Hi, I’m Chinmay, a passionate Web Developer currently pursuing my Bachelor of Engineering (B.E.) degree at PES College of Engineering Mandya. I enjoy building modern, responsive, and user-friendly web applications using technologies like HTML, CSS, JavaScript, React, Node.js, and MongoDB. I am continuously learning new technologies and improving my skills to grow as a full-stack developer.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+          </div>
+        </div>
+
+        <div class="hero-card glass-card fade-in-right">
+          <div class="hero-card-head">
+            <div>
+              <p class="text-muted">Web developer student</p>
+              <h2><span id="typedText"></span><span class="cursor">|</span></h2>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container section-heading fade-in-up">
+        <small>About Me</small>
+        <h2>Who I Am</h2>
+        <p>I am a motivated web developer student focused on modern UI, performance, and practical web applications.</p>
+      </div>
+      <div class="container about-grid">
+        <div class="glass-card about-copy fade-in-left">
+          <h3>Short Biography</h3>
+          <p>
+            Currently studying web development with a passion for building interactive interfaces, learning backend integration, and exploring full-stack features.
+          </p>
+          <ul>
+            <li>Strong foundation in HTML, CSS, and JavaScript.</li>
+            <li>Enthusiastic about React, Node.js, Express, and MongoDB.</li>
+            <li>Aiming to ship user-friendly projects and grow as a developer.</li>
+          </ul>
+        </div>
+        <div class="glass-card about-details fade-in-right">
+          <h3>Education & Experience</h3>
+          <div class="timeline-item">
+            <span class="timeline-year">(2023-2027) - Present</span>
+            <div>
+              <h4>B.E.- Computer Science and Engineering</h4>
+              <p>Currently pursuing a B.E. in Computer Science Engineering, learning programming, web development, data structures and databases concepts at PES College of Engineering..</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">(2023)</span>
+            <div>
+              <h4>Class XII(PUC) - PCMB</h4>
+              <p>Completed Class 12th with PCMB (Physics, Chemistry, Mathematics, and Biology), building a strong foundation in analytical thinking, problem-solving, and scientific concepts..</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">(2021)</span>
+            <div>
+              <h4>Class X(SSLC)</h4>
+              <p>Completed 10th standard under the CBSE curriculum, developing strong academic fundamentals and problem-solving skills across core subjects..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container section-heading fade-in-up">
+        <small>Skills</small>
+        <h2>What I Can Do</h2>
+        <p>I can build modern, responsive, and user-friendly full-stack web applications using the MERN stack..</p>
+      </div>
+      <div class="container skills-grid">
+        <div class="glass-card skills-card fade-in-left">
+          <h3>Frontend</h3>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+        </div>
+
+        <div class="glass-card skills-card fade-in-right">
+          <h3> Backend</h3>
+          <ul class="skill-list">
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>Git</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="resume">
+      <div class="container section-heading fade-in-up">
+        <small>Resume</small>
+        <h2>Education & Certifications</h2>
+        <p>Ready-to-download resume and a clear timeline of my academic progress and achievements.</p>
+      </div>
+      <div class="container resume-grid">
+        <div class="glass-card resume-card fade-in-left">
+          <h3>Resume</h3>
+          <p>Download a concise resume summary for internships, freelancing, and development opportunities.</p>
+          <a href="resume.txt" download="Chinmay-K-S-Resume.txt" class="btn btn-primary">Download Resume</a>
+        </div>
+        <div class="glass-card resume-timeline fade-in-right">
+          <div class="timeline-entry">
+            <span class="entry-date">2024</span>
+            <div>
+              <h4>Certified Front-End Developer</h4>
+              <p>Certificate in modern HTML, CSS, and JavaScript application development.</p>
+            </div>
+          </div>
+          <div class="timeline-entry">
+            <span class="entry-date">2025</span>
+            <div>
+              <h4>React & Web Apps</h4>
+              <p>Completed training on React fundamentals, component-based design, and state management.</p>
+            </div>
+          </div>
+          <div class="timeline-entry">
+            <span class="entry-date">Present</span>
+            <div>
+              <h4>MongoDB & Node Certification</h4>
+              <p>Studying backend integration with Express.js and document databases for real projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container section-heading fade-in-up">
+        <small>Contact</small>
+        <h2>Let's Connect</h2>
+        <p>Have a project idea or want to collaborate? Send a message and I will get back soon.</p>
+      </div>
+      <div class="container contact-grid">
+        <div class="glass-card contact-card fade-in-left">
+          <h3>Contact Info</h3>
+          <p>Open to internship opportunities, freelance requests, and collaborative web projects.</p>
+          <div class="contact-links">
+            <a href="chinmayks946@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 8l9 6 9-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><path d="M21 8v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>Email</a>
+            <a href="https://github.com/chinmay946" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.9 9.4.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 .1 1.6-.6 1.9-1 .1-.8.4-1.3.7-1.6-2.2-.2-4.4-1.1-4.4-4.8 0-1 .4-1.9 1.2-2.5 0-.3-.4-1.2.1-2.4 0 0 1-.3 3.3 1.2.9-.3 1.8-.5 2.8-.5s1.9.2 2.8.5c2.3-1.5 3.3-1.2 3.3-1.2.5 1.2.1 2.1.1 2.4.8.6 1.2 1.5 1.2 2.5 0 3.7-2.2 4.6-4.4 4.8.5.5.9 1.2.9 2.5v3.8c0 .3.2.6.7.5C19.1 20.1 22 16.4 22 12c0-5.5-4.5-10-10-10Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>GitHub</a>
+            <a href="https://www.linkedin.com/in/chinmay-ks-a658a630a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-14h4v2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><rect x="2" y="9" width="4" height="12" rx="1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><circle cx="4" cy="4" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>LinkedIn</a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><path d="M16 11.37a4 4 0 1 1-7.9 1.4 4 4 0 0 1 7.9-1.4Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><path d="M17.5 6.5h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>Instagram</a>
+          </div>
+        </div>
+
+        <form class="glass-card contact-form fade-in-right" id="contactForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note" id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Chinmay K S. Crafted for modern student portfolios.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
