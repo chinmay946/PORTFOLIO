@@ -19,6 +19,14 @@ let db;
 app.use(cors());
 app.use(express.json());
 
+// Disable caching for development
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  next();
+});
+
 // Serve static files from parent directory (frontend files)
 app.use(express.static(path.join(__dirname, '..')));
 
