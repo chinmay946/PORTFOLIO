@@ -2,37 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Modern student web developer portfolio with dark glassmorphism design." />
-  <title>Chinmay K S - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Professional portfolio of Chinmay K S - Full-stack web developer specializing in MERN stack (MongoDB, Express, React, Node.js) development. Showcasing modern web applications and responsive design." />
+  <meta name="keywords" content="web developer, portfolio, MERN stack, React, Node.js, MongoDB, full-stack developer, JavaScript, freelancer, frontend, backend" />
+  <meta name="author" content="Chinmay K S" />
+  <meta name="theme-color" content="#05080f" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Chinmay K S - Full-Stack Web Developer Portfolio | MERN Stack Expert</title>
+  
+  <!-- Preconnect to external resources for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="loader-overlay" id="loader">
+  <!-- Page Loader -->
+  <div class="loader-overlay" id="loader" role="status" aria-live="polite">
     <div class="loader-shell">
       <div class="loader-ring"></div>
       <p>Loading portfolio...</p>
     </div>
   </div>
 
-  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top of page" title="Back to top">
     <span>&#8679;</span>
   </button>
 
-  <header class="topbar">
+  <!-- Navigation Header -->
+  <header class="topbar" role="banner">
     <div class="container topbar-inner">
-      <a href="#home" class="brand">Portfolio</a>
-      <nav class="nav" id="navMenu">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+      <a href="#home" class="brand">
+          <path d="M12 6v6l4 2"></path>
+        </svg>
+        <span>Chinmay</span>
+      </a>
+      <nav class="nav" id="navMenu" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav-link" data-nav="home">
+          <span class="nav-text">Home</span>
+          <span class="nav-dot"></span>
+        </a>
+        <a href="#about" class="nav-link" data-nav="about">
+          <span class="nav-text">About</span>
+          <span class="nav-dot"></span>
+        </a>
+        <a href="#skills" class="nav-link" data-nav="skills">
+          <span class="nav-text">Skills</span>
+          <span class="nav-dot"></span>
+        </a>
+        <a href="#resume" class="nav-link" data-nav="resume">
+          <span class="nav-text">Resume</span>
+          <span class="nav-dot"></span>
+        </a>
+        <a href="#contact" class="nav-link nav-cta">
+          <span class="nav-text">Hire Me</span>
+          <span class="nav-cta-arrow">→</span>
+        </a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -40,185 +73,323 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero section" id="home">
+  <main role="main">
+    <!-- Hero Section -->
+    <section class="hero section" id="home" aria-labelledby="hero-heading">
       <div class="container hero-grid">
         <div class="hero-copy glass-card fade-in-up">
           <span class="eyebrow">Hello, I am</span>
-          <h1>Chinmay K S</h1>
-          <p class="role">Student Computer Science Engineering</p>
+          <h1 id="hero-heading">Chinmay K S</h1>
+          <p class="role">Full-Stack Web Developer</p>
           <p class="intro">
-            Hi, I’m Chinmay, a passionate Web Developer currently pursuing my Bachelor of Engineering (B.E.) degree at PES College of Engineering Mandya. I enjoy building modern, responsive, and user-friendly web applications using technologies like HTML, CSS, JavaScript, React, Node.js, and MongoDB. I am continuously learning new technologies and improving my skills to grow as a full-stack developer.
+            I'm a passionate web developer pursuing my B.E. in Computer Science Engineering at PES College of Engineering Mandya. I specialize in building modern, responsive, and user-friendly web applications using the MERN stack (MongoDB, Express, React, Node.js). I'm committed to continuous learning and creating high-quality digital solutions.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            <a href="#projects" class="btn btn-secondary">View My Work</a>
           </div>
         </div>
 
         <div class="hero-card glass-card fade-in-right">
           <div class="hero-card-head">
             <div>
-              <p class="text-muted">Web developer student</p>
+              <p class="text-muted">Currently Building:</p>
               <h2><span id="typedText"></span><span class="cursor">|</span></h2>
             </div>
           </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <!-- About Section -->
+    <section class="section" id="about" aria-labelledby="about-heading">
       <div class="container section-heading fade-in-up">
         <small>About Me</small>
-        <h2>Who I Am</h2>
-        <p>I am a motivated web developer student focused on modern UI, performance, and practical web applications.</p>
+        <h2 id="about-heading">Who I Am</h2>
+        <p>I'm a motivated developer focused on creating modern UI, optimizing performance, and building practical, scalable web applications.</p>
       </div>
       <div class="container about-grid">
         <div class="glass-card about-copy fade-in-left">
-          <h3>Short Biography</h3>
+          <h3>Background</h3>
           <p>
-            Currently studying web development with a passion for building interactive interfaces, learning backend integration, and exploring full-stack features.
+            I'm a passionate web developer dedicated to mastering full-stack development. My journey involves building interactive interfaces, learning backend integration, and exploring modern web technologies to deliver exceptional user experiences.
           </p>
           <ul>
-            <li>Strong foundation in HTML, CSS, and JavaScript.</li>
-            <li>Enthusiastic about React, Node.js, Express, and MongoDB.</li>
-            <li>Aiming to ship user-friendly projects and grow as a developer.</li>
+            <li>Strong foundation in HTML, CSS, and JavaScript</li>
+            <li>Proficient with React for interactive frontends</li>
+            <li>Experience with Node.js, Express, and MongoDB backend</li>
+            <li>Focus on responsive design and performance optimization</li>
+            <li>Committed to clean code and best practices</li>
           </ul>
         </div>
         <div class="glass-card about-details fade-in-right">
-          <h3>Education & Experience</h3>
+          <h3>Education & Achievements</h3>
           <div class="timeline-item">
-            <span class="timeline-year">(2023-2027) - Present</span>
+            <span class="timeline-year">2023-2027</span>
             <div>
-              <h4>B.E.- Computer Science and Engineering</h4>
-              <p>Currently pursuing a B.E. in Computer Science Engineering, learning programming, web development, data structures and databases concepts at PES College of Engineering..</p>
+              <h4>B.E. Computer Science Engineering</h4>
+              <p>Currently pursuing at PES College of Engineering Mandya. Studying programming, web development, data structures, and database concepts.</p>
             </div>
           </div>
           <div class="timeline-item">
-            <span class="timeline-year">(2023)</span>
+            <span class="timeline-year">2023</span>
             <div>
-              <h4>Class XII(PUC) - PCMB</h4>
-              <p>Completed Class 12th with PCMB (Physics, Chemistry, Mathematics, and Biology), building a strong foundation in analytical thinking, problem-solving, and scientific concepts..</p>
+              <h4>Class XII (PUC) - PCMB</h4>
+              <p>Completed with strong foundation in Physics, Chemistry, Mathematics, and Biology. Developed analytical and problem-solving skills.</p>
             </div>
           </div>
           <div class="timeline-item">
-            <span class="timeline-year">(2021)</span>
+            <span class="timeline-year">2021</span>
             <div>
-              <h4>Class X(SSLC)</h4>
-              <p>Completed 10th standard under the CBSE curriculum, developing strong academic fundamentals and problem-solving skills across core subjects..</p>
+              <h4>Class X (SSLC) - CBSE</h4>
+              <p>Completed with distinction. Developed strong academic fundamentals across core subjects.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="skills">
+    <!-- Skills Section -->
+    <section class="section" id="skills" aria-labelledby="skills-heading">
       <div class="container section-heading fade-in-up">
-        <small>Skills</small>
-        <h2>What I Can Do</h2>
-        <p>I can build modern, responsive, and user-friendly full-stack web applications using the MERN stack..</p>
+        <small>Technical Skills</small>
+        <h2 id="skills-heading">What I Can Do</h2>
+        <p>I build modern, responsive, and user-friendly full-stack web applications using the MERN stack and industry best practices.</p>
       </div>
       <div class="container skills-grid">
         <div class="glass-card skills-card fade-in-left">
-          <h3>Frontend</h3>
-          <ul class="skill-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-          </ul>
+          <h3>Frontend Development</h3>
+          <div class="skills-with-percentage">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">React</span>
+                <span class="skill-percentage">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 78%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-badge-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+          </div>
         </div>
 
         <div class="glass-card skills-card fade-in-right">
-          <h3> Backend</h3>
-          <ul class="skill-list">
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-            <li>Git</li>
-            <li>GitHub</li>
-          </ul>
+          <h3>Backend & Tools</h3>
+          <div class="skills-with-percentage">
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Node.js</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Express.js</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">MongoDB</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class="skill-name">Git</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-badge-list">
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>MongoDB</span>
+            <span>Git</span>
+          </div>
         </div>
       </div>
     </section>
 
-
-    <section class="section" id="resume">
+    <!-- Resume/Certifications Section -->
+    <section class="section" id="resume" aria-labelledby="resume-heading">
       <div class="container section-heading fade-in-up">
         <small>Resume</small>
-        <h2>Education & Certifications</h2>
-        <p>Ready-to-download resume and a clear timeline of my academic progress and achievements.</p>
+        <h2 id="resume-heading">Education & Certifications</h2>
+        <p>Download my resume and view my professional achievements and learning journey.</p>
       </div>
       <div class="container resume-grid">
         <div class="glass-card resume-card fade-in-left">
-          <h3>Resume</h3>
-          <p>Download a concise resume summary for internships, freelancing, and development opportunities.</p>
+          <h3>My Resume</h3>
+          <p>A comprehensive summary of my skills, experience, and achievements. Perfect for internship and freelancing opportunities.</p>
           <a href="resume.txt" download="Chinmay-K-S-Resume.txt" class="btn btn-primary">Download Resume</a>
         </div>
         <div class="glass-card resume-timeline fade-in-right">
           <div class="timeline-entry">
             <span class="entry-date">2024</span>
             <div>
-              <h4>Certified Front-End Developer</h4>
-              <p>Certificate in modern HTML, CSS, and JavaScript application development.</p>
+              <h4>Frontend Developer Certification</h4>
+              <p>Completed comprehensive training in HTML5, CSS3, and modern JavaScript application development.</p>
             </div>
           </div>
           <div class="timeline-entry">
             <span class="entry-date">2025</span>
             <div>
-              <h4>React & Web Apps</h4>
-              <p>Completed training on React fundamentals, component-based design, and state management.</p>
+              <h4>React & Web Applications</h4>
+              <p>Advanced training in React fundamentals, component-based architecture, and state management patterns.</p>
             </div>
           </div>
           <div class="timeline-entry">
             <span class="entry-date">Present</span>
             <div>
-              <h4>MongoDB & Node Certification</h4>
-              <p>Studying backend integration with Express.js and document databases for real projects.</p>
+              <h4>MongoDB & Node.js Backend</h4>
+              <p>Currently studying backend integration with Express.js, database design, and full-stack development practices.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <!-- Contact Section -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
       <div class="container section-heading fade-in-up">
         <small>Contact</small>
-        <h2>Let's Connect</h2>
-        <p>Have a project idea or want to collaborate? Send a message and I will get back soon.</p>
+        <h2 id="contact-heading">Let's Connect</h2>
+        <p>Have a project in mind? Want to collaborate? Feel free to reach out - I'd love to hear from you!</p>
       </div>
       <div class="container contact-grid">
         <div class="glass-card contact-card fade-in-left">
-          <h3>Contact Info</h3>
-          <p>Open to internship opportunities, freelance requests, and collaborative web projects.</p>
-          <div class="contact-links">
-            <a href="chinmayks946@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 8l9 6 9-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><path d="M21 8v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>Email</a>
-            <a href="https://github.com/chinmay946" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.9 9.4.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 .1 1.6-.6 1.9-1 .1-.8.4-1.3.7-1.6-2.2-.2-4.4-1.1-4.4-4.8 0-1 .4-1.9 1.2-2.5 0-.3-.4-1.2.1-2.4 0 0 1-.3 3.3 1.2.9-.3 1.8-.5 2.8-.5s1.9.2 2.8.5c2.3-1.5 3.3-1.2 3.3-1.2.5 1.2.1 2.1.1 2.4.8.6 1.2 1.5 1.2 2.5 0 3.7-2.2 4.6-4.4 4.8.5.5.9 1.2.9 2.5v3.8c0 .3.2.6.7.5C19.1 20.1 22 16.4 22 12c0-5.5-4.5-10-10-10Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>GitHub</a>
-            <a href="https://www.linkedin.com/in/chinmay-ks-a658a630a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-14h4v2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><rect x="2" y="9" width="4" height="12" rx="1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><circle cx="4" cy="4" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>LinkedIn</a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><path d="M16 11.37a4 4 0 1 1-7.9 1.4 4 4 0 0 1 7.9-1.4Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/><path d="M17.5 6.5h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/></svg>Instagram</a>
+          <div class="contact-card-header">
+            <span class="eyebrow">Reach Out</span>
+            <h3>Get In Touch</h3>
+            <p>I'm always open to internships, freelance work, and collaborative projects. Send a note and I’ll respond quickly.</p>
           </div>
-        </div>
 
-        <form class="glass-card contact-form fade-in-right" id="contactForm">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required />
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <p class="form-note" id="formMessage"></p>
+          <div class="contact-info-grid">
+            <a href="mailto:chinmayks946@gmail.com" class="info-card" aria-label="Send email to chinmayks946@gmail.com" title="Email me">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path d="M3 8l9 6 9-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                  <path d="M21 8v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                </svg>
+              </div>
+              <div>
+                <small>Email me</small>
+                <span>chinmayks946@gmail.com</span>
+              </div>
+            </a>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path d="M12 2.5C7.1 2.5 3.1 6.5 3.1 11.4c0 5.1 4.2 9.3 8.9 12.9 4.7-3.5 8.9-7.8 8.9-12.9 0-4.9-4-8.9-8.9-8.9Zm0 12.4a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                </svg>
+              </div>
+              <div>
+                <small>Location</small>
+                <span>Karnataka, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social-row">
+            <a href="https://www.linkedin.com/in/chinmay-ks-a658a630a" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Visit my LinkedIn profile" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-14h4v2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                <rect x="2" y="9" width="4" height="12" rx="1" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                <circle cx="4" cy="4" r="2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </a>
+            <a href="https://github.com/chinmay946" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Visit my GitHub profile" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.9 9.4.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1 .1 1.6-.6 1.9-1 .1-.8.4-1.3.7-1.6-2.2-.2-4.4-1.1-4.4-4.8 0-1 .4-1.9 1.2-2.5 0-.3-.4-1.2.1-2.4 0 0 1-.3 3.3 1.2.9-.3 1.8-.5 2.8-.5s1.9.2 2.8.5c2.3-1.5 3.3-1.2 3.3-1.2.5 1.2.1 2.1.1 2.4.8.6 1.2 1.5 1.2 2.5 0 3.7-2.2 4.6-4.4 4.8.5.5.9 1.2.9 2.5v3.8c0 .3.2.6.7.5C19.1 20.1 22 16.4 22 12c0-5.5-4.5-10-10-10Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Visit my Instagram profile" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5" ry="5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                <path d="M16 11.37a4 4 0 1 1-7.9 1.4 4 4 0 0 1 7.9-1.4Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                <path d="M17.5 6.5h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </a>
+          </div>
+          </div>
+
+        <!-- Contact Form -->
+        <form class="glass-card contact-form fade-in-right" id="contactForm" aria-label="Contact form">
+          <div class="contact-form-grid">
+            <div class="contact-form-row">
+              <label for="name">Name <span aria-label="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" />
+            </div>
+            <div class="contact-form-row">
+              <label for="email">Email <span aria-label="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-required="true" />
+            </div>
+          </div>
+
+          <div class="contact-form-row">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" />
+          </div>
+
+          <div class="contact-form-row">
+            <label for="message">Message <span aria-label="required">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, ideas, or just say hi!" required aria-required="true"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary contact-submit">Send Message <span>→</span></button>
+          <p class="form-note" id="formMessage" role="status" aria-live="polite" aria-atomic="true"></p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Chinmay K S. Crafted for modern student portfolios.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+  <!-- Main Script -->
+  <script src="script.js" defer></script>
 </body>
 </html>
