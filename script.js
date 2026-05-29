@@ -2,12 +2,12 @@ const typedPhrases = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express.
 const typedText = document.getElementById('typedText');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
-const scrollTopBtn = document.getElementById('scrollTopBtn');
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
-const loader = document.getElementById('loader');
+const sections = document.querySelectorAll('main .section');
+const navLinks = document.querySelectorAll('.nav a');
 
 let typedIndex = 0;
 let charIndex = 0;
@@ -58,18 +58,33 @@ if (filterButtons.length > 0) {
   });
 }
 
-// Scroll to top button
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 420) {
-    scrollTopBtn?.classList.add('visible');
-  } else {
-    scrollTopBtn?.classList.remove('visible');
-  }
-});
+const sectionIds = Array.from(sections).map(section => section.id || 'home');
 
-scrollTopBtn?.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+function setActiveSection(targetId) {
+  if (!targetId || !sectionIds.includes(targetId)) {
+    targetId = 'home';
+  }
+
+  sections.forEach(section => {
+    section.classList.toggle('active', section.id === targetId);
+  });
+
+  navLinks.forEach(link => {
+    const linkTarget = link.getAttribute('href')?.replace('#', '');
+    link.classList.toggle('active', linkTarget === targetId);
+  });
+
+  if (location.hash !== `#${targetId}`) {
+    history.replaceState(null, '', `#${targetId}`);
+  }
+}
+
+function initSectionNavigation() {
+  const initialSection = window.location.hash.replace('#', '') || 'home';
+  setActiveSection(initialSection);
+}
+
+initSectionNavigation();
 
 // Mobile menu toggle
 if (menuToggle && navMenu) {
@@ -79,9 +94,12 @@ if (menuToggle && navMenu) {
     menuToggle.classList.toggle('active', isActive);
   });
 
-  const navLinks = document.querySelectorAll('.nav a');
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const href = link.getAttribute('href') || '';
+      const targetId = href.replace('#', '') || 'home';
+      setActiveSection(targetId);
       navMenu.classList.remove('active');
       menuToggle.classList.remove('active');
     });
@@ -105,6 +123,11 @@ if (menuToggle && navMenu) {
     }
   });
 }
+
+window.addEventListener('hashchange', () => {
+  const hash = window.location.hash.replace('#', '') || 'home';
+  setActiveSection(hash);
+});
 
 // Contact form submission
 if (contactForm) {
@@ -162,18 +185,6 @@ if (contactForm) {
     }
   });
 }
-
-// Page loader
-window.addEventListener('load', () => {
-  if (loader) {
-    setTimeout(() => {
-      loader.style.opacity = '0';
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 500);
-    }, 700);
-  }
-});
 
 // Prevent layout shift from scrollbar
 window.addEventListener('load', () => {

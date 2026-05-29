@@ -22,19 +22,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Page Loader -->
-  <div class="loader-overlay" id="loader" role="status" aria-live="polite">
-    <div class="loader-shell">
-      <div class="loader-ring"></div>
-      <p>Loading portfolio...</p>
-    </div>
-  </div>
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top of page" title="Back to top">
-    <span>&#8679;</span>
-  </button>
-
   <!-- Navigation Header -->
   <header class="topbar" role="banner">
     <div class="container topbar-inner">
@@ -56,8 +43,12 @@
           <span class="nav-text">Skills</span>
           <span class="nav-dot"></span>
         </a>
-        <a href="#resume" class="nav-link" data-nav="resume">
-          <span class="nav-text">Resume</span>
+        <a href="#projects" class="nav-link" data-nav="projects">
+          <span class="nav-text">Projects</span>
+          <span class="nav-dot"></span>
+        </a>
+        <a href="#contact" class="nav-link" data-nav="contact">
+          <span class="nav-text">Contact</span>
           <span class="nav-dot"></span>
         </a>
         <a href="#contact" class="nav-link nav-cta">
@@ -75,7 +66,7 @@
 
   <main role="main">
     <!-- Hero Section -->
-    <section class="hero section" id="home" aria-labelledby="hero-heading">
+    <section class="hero section active" id="home" aria-labelledby="hero-heading">
       <div class="container hero-grid">
         <div class="hero-copy glass-card fade-in-up">
           <span class="eyebrow">Hello, I am</span>
@@ -103,49 +94,36 @@
 
     <!-- About Section -->
     <section class="section" id="about" aria-labelledby="about-heading">
-      <div class="container section-heading fade-in-up">
-        <small>About Me</small>
-        <h2 id="about-heading">Who I Am</h2>
-        <p>I'm a motivated developer focused on creating modern UI, optimizing performance, and building practical, scalable web applications.</p>
-      </div>
-      <div class="container about-grid">
-        <div class="glass-card about-copy fade-in-left">
-          <h3>Background</h3>
+      <div class="container about-new-grid">
+        <!-- Left: About Content -->
+        <div class="about-content glass-card fade-in-left">
+          <h2 id="about-heading">About <span class="text-accent">Me</span></h2>
           <p>
-            I'm a passionate web developer dedicated to mastering full-stack development. My journey involves building interactive interfaces, learning backend integration, and exploring modern web technologies to deliver exceptional user experiences.
+            I am <strong>Chinmay K S</strong>, an aspiring software developer currently pursuing a Bachelor of Engineering in Computer Science and Engineering at PESCE Mandya (Batch 2023–2027).
           </p>
-          <ul>
-            <li>Strong foundation in HTML, CSS, and JavaScript</li>
-            <li>Proficient with React for interactive frontends</li>
-            <li>Experience with Node.js, Express, and MongoDB backend</li>
-            <li>Focus on responsive design and performance optimization</li>
-            <li>Committed to clean code and best practices</li>
-          </ul>
-        </div>
-        <div class="glass-card about-details fade-in-right">
-          <h3>Education & Achievements</h3>
-          <div class="timeline-item">
-            <span class="timeline-year">2023-2027</span>
-            <div>
-              <h4>B.E. Computer Science Engineering</h4>
-              <p>Currently pursuing at PES College of Engineering Mandya. Studying programming, web development, data structures, and database concepts.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2023</span>
-            <div>
-              <h4>Class XII (PUC) - PCMB</h4>
-              <p>Completed with strong foundation in Physics, Chemistry, Mathematics, and Biology. Developed analytical and problem-solving skills.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year">2021</span>
-            <div>
-              <h4>Class X (SSLC) - CBSE</h4>
-              <p>Completed with distinction. Developed strong academic fundamentals across core subjects.</p>
-            </div>
+          <p>
+            My journey in tech is driven by a deep fascination with how design and logic intersect. I specialize in crafting responsive, user-centric interfaces that don't just look good, but feel intuitive to use.
+          </p>
+          <p>
+            I am a self-motivated learner, constantly exploring the latest trends in web technologies from <span class="text-accent">React</span> and <span class="text-accent">Node.js</span> to modern UI/UX principles and AI-driven development.
+          </p>
+          <div class="about-actions">
+            <a href="resume.txt" download="Chinmay-K-S-Resume.txt" class="btn btn-primary">Download Resume</a>
+            <span class="internship-badge">
+              <span class="badge-dot"></span>
+              Open to Internships
+            </span>
           </div>
         </div>
+
+        <!-- Right: Profile Image & Quick Info -->
+        <div class="about-sidebar fade-in-right">
+          <!-- Profile Image -->
+          <div class="profile-image-container glass-card">
+            <img src="profile.jpg" alt="Chinmay K S - Profile Photo" class="profile-image" />
+          </div>
+
+          </div>
       </div>
     </section>
 
@@ -157,139 +135,159 @@
         <p>I build modern, responsive, and user-friendly full-stack web applications using the MERN stack and industry best practices.</p>
       </div>
       <div class="container skills-grid">
-        <div class="glass-card skills-card fade-in-left">
-          <h3>Frontend Development</h3>
-          <div class="skills-with-percentage">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">HTML5</span>
-                <span class="skill-percentage">90%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">CSS3</span>
-                <span class="skill-percentage">85%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">JavaScript</span>
-                <span class="skill-percentage">80%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">React</span>
-                <span class="skill-percentage">78%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 78%"></div>
-              </div>
-            </div>
+        <!-- Skill cards grid: each small card shows a single skill and a progress bar -->
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">HTML</span>
+            <span class="skill-percentage">90%</span>
           </div>
-          <div class="skill-badge-list">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>React</span>
-          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
         </div>
 
-        <div class="glass-card skills-card fade-in-right">
-          <h3>Backend & Tools</h3>
-          <div class="skills-with-percentage">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Node.js</span>
-                <span class="skill-percentage">75%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Express.js</span>
-                <span class="skill-percentage">75%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">MongoDB</span>
-                <span class="skill-percentage">70%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 70%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span class="skill-name">Git</span>
-                <span class="skill-percentage">88%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 88%"></div>
-              </div>
-            </div>
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">CSS</span>
+            <span class="skill-percentage">85%</span>
           </div>
-          <div class="skill-badge-list">
-            <span>Node.js</span>
-            <span>Express.js</span>
-            <span>MongoDB</span>
-            <span>Git</span>
+          <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percentage">60%</span>
           </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:60%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">Java</span>
+            <span class="skill-percentage">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">Prompt Engineering</span>
+            <span class="skill-percentage">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">Python</span>
+            <span class="skill-percentage">60%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:60%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">Figma</span>
+            <span class="skill-percentage">100%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:100%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">Generative AI Tools</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">Node.js</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">Express.js</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">React</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-header">
+            <span class="skill-name">MongoDB</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
         </div>
       </div>
     </section>
 
-    <!-- Resume/Certifications Section -->
-    <section class="section" id="resume" aria-labelledby="resume-heading">
+    <!-- Projects Section -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
       <div class="container section-heading fade-in-up">
-        <small>Resume</small>
-        <h2 id="resume-heading">Education & Certifications</h2>
-        <p>Download my resume and view my professional achievements and learning journey.</p>
+        <small>Portfolio</small>
+        <h2 id="projects-heading">Featured Projects</h2>
+        <p>Explore a selection of projects that showcase responsive UI, MERN development, and modern web interactions.</p>
       </div>
-      <div class="container resume-grid">
-        <div class="glass-card resume-card fade-in-left">
-          <h3>My Resume</h3>
-          <p>A comprehensive summary of my skills, experience, and achievements. Perfect for internship and freelancing opportunities.</p>
-          <a href="resume.txt" download="Chinmay-K-S-Resume.txt" class="btn btn-primary">Download Resume</a>
+      <div class="container">
+        <div class="filter-panel fade-in-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
         </div>
-        <div class="glass-card resume-timeline fade-in-right">
-          <div class="timeline-entry">
-            <span class="entry-date">2024</span>
-            <div>
-              <h4>Frontend Developer Certification</h4>
-              <p>Completed comprehensive training in HTML5, CSS3, and modern JavaScript application development.</p>
+        <div class="project-grid fade-in-up">
+          <article class="project-card" data-category="frontend">
+            <div class="project-top">
+              <span>UI / Frontend</span>
+              <span class="project-status">Live Demo</span>
             </div>
-          </div>
-          <div class="timeline-entry">
-            <span class="entry-date">2025</span>
-            <div>
-              <h4>React & Web Applications</h4>
-              <p>Advanced training in React fundamentals, component-based architecture, and state management patterns.</p>
+            <h3>Portfolio Landing Page</h3>
+            <p>A responsive single-page portfolio built with modern HTML, CSS, and JavaScript, optimized for desktop and mobile browsing.</p>
+            <a class="project-link" href="#contact">View project →</a>
+          </article>
+
+          <article class="project-card" data-category="backend">
+            <div class="project-top">
+              <span>API / Backend</span>
+              <span class="project-status">Node.js</span>
             </div>
-          </div>
-          <div class="timeline-entry">
-            <span class="entry-date">Present</span>
-            <div>
-              <h4>MongoDB & Node.js Backend</h4>
-              <p>Currently studying backend integration with Express.js, database design, and full-stack development practices.</p>
+            <h3>Contact Form API</h3>
+            <p>A lightweight Express backend that saves messages and supports this contact form with secure message handling.</p>
+            <a class="project-link" href="#contact">View project →</a>
+          </article>
+
+          <article class="project-card" data-category="fullstack">
+            <div class="project-top">
+              <span>Full Stack</span>
+              <span class="project-status">MERN</span>
             </div>
-          </div>
+            <h3>Task Manager App</h3>
+            <p>A full-stack app using React, Node.js, Express, and MongoDB for task creation, updates, and workflow tracking.</p>
+            <a class="project-link" href="#contact">View project →</a>
+          </article>
+
+          <article class="project-card" data-category="frontend">
+            <div class="project-top">
+              <span>Frontend</span>
+              <span class="project-status">Design</span>
+            </div>
+            <h3>Animation Showcase</h3>
+            <p>Interactive UI animations, transitions, and effects designed to bring modern interfaces to life.</p>
+            <a class="project-link" href="#contact">View project →</a>
+          </article>
         </div>
       </div>
     </section>
