@@ -93,7 +93,7 @@ textarea {
   letter-spacing: -0.04em;
   color: var(--Text);
   white-space: nowrap;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -146,15 +146,21 @@ textarea {
 
 .nav a {
   color: var(--muted);
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.95rem;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1rem;
   border-radius: 12px;
+}
+
+.nav-cta {
+  margin-left: 4rem;
 }
 
 .nav a.active {
@@ -537,6 +543,28 @@ textarea {
   border-color: rgba(79, 216, 255, 0.4);
 }
 
+.btn-internship {
+  gap: 0.9rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(79, 216, 255, 0.16);
+  background: rgba(6, 13, 27, 0.9);
+}
+
+.btn-internship:hover {
+  background: rgba(7, 18, 39, 0.92);
+}
+
+.btn-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 6px rgba(79, 216, 255, 0.08);
+}
+
 .hero-card {
   display: grid;
   gap: 1.75rem;
@@ -634,7 +662,7 @@ textarea {
 .about-new-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: 1.4rem;
   align-items: start;
 }
 
@@ -708,12 +736,12 @@ textarea {
 }
 
 .profile-image-container {
-  padding: 1.5rem;
+  padding: 0;
   border-radius: 20px;
   overflow: hidden;
-  aspect-ratio: 1;
-  min-height: 240px;
-  max-width: 280px;
+  min-height: 320px;
+  max-width: 260px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -724,6 +752,28 @@ textarea {
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+.profile-details-card {
+  max-width: 320px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.profile-details-card h3 {
+  margin: 0 0 1rem;
+  color: var(--cyan);
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.profile-details-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.95rem;
 }
 
 .quick-info {
